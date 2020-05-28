@@ -1,0 +1,142 @@
+{
+  "name": "lighthouse-plugin-register-locales",
+  "version": "0.0.1",
+  "description": "lighthouse plugin to register overriding locales",
+  "main": "dist/index.js",
+  "repository": "https://github.com/aquariuslt/lighthouse-plugin-md5",
+  "author": "Aquariuslt <superaquariuslt@gmail.com>>",
+  "license": "MIT",
+  "private": false,
+  "keywords": [
+    "lighthouse",
+    "lighthouse-plugin",
+    "i18n",
+    "locales"
+  ],
+  "scripts": {
+    "prebuild": "rimraf dist",
+    "build": "tsc",
+    "pretest": "tsc",
+    "test": "jest",
+    "pretest:cov": "tsc",
+    "test:cov": "jest --coverage",
+    "release": "semantic-release"
+  },
+  "files": [
+    "dist"
+  ],
+  "dependencies": {
+    "lodash": "4.17.15"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "8.3.5",
+    "@commitlint/config-conventional": "8.3.4",
+    "@semantic-release/changelog": "5.0.1",
+    "@semantic-release/git": "9.0.0",
+    "@types/jest": "25.2.3",
+    "@types/node": "12.12.31",
+    "@typescript-eslint/eslint-plugin": "3.0.2",
+    "@typescript-eslint/parser": "3.0.2",
+    "chrome-launcher": "0.13.2",
+    "eslint": "7.1.0",
+    "eslint-config-prettier": "6.11.0",
+    "eslint-plugin-prettier": "3.1.3",
+    "husky": "4.2.5",
+    "jest": "26.0.1",
+    "lerna": "3.22.0",
+    "lighthouse": "6.0.0",
+    "prettier": "2.0.5",
+    "pretty-quick": "2.0.1",
+    "puppeteer": "3.1.0",
+    "rimraf": "3.0.2",
+    "semantic-release": "17.0.8",
+    "ts-jest": "26.0.0",
+    "typescript": "3.9.3"
+  },
+  "peerDependencies": {
+    "lighthouse": "6.0.0"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "ts"
+    ],
+    "moduleNameMapper": {
+      "^@/(.*)$": "<rootDir>/src/$1"
+    },
+    "transform": {
+      "^.+\\.(t|j)s$": "ts-jest"
+    },
+    "collectCoverageFrom": [
+      "<rootDir>/src/**/*.ts"
+    ],
+    "coverageDirectory": "<rootDir>/reports/coverage",
+    "testEnvironment": "node",
+    "testMatch": [
+      "<rootDir>/**/*.test.ts"
+    ]
+  },
+  "eslintConfig": {
+    "parser": "@typescript-eslint/parser",
+    "extends": [
+      "plugin:@typescript-eslint/recommended",
+      "prettier/@typescript-eslint"
+    ],
+    "plugins": [
+      "@typescript-eslint",
+      "prettier"
+    ],
+    "parserOptions": {
+      "ecmaVersion": 2018,
+      "sourceType": "module"
+    },
+    "rules": {
+      "@typescript-eslint/explicit-function-return-type": "off",
+      "@typescript-eslint/explicit-member-accessibility": "off",
+      "@typescript-eslint/no-parameter-properties": "off",
+      "@typescript-eslint/interface-name-prefix": "off"
+    }
+  },
+  "eslintIgnore": [
+    "lib"
+  ],
+  "prettier": {
+    "semi": true,
+    "arrowParens": "always",
+    "proseWrap": "never",
+    "singleQuote": true,
+    "printWidth": 120
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ],
+    "rules": {
+      "type-enum": [
+        2,
+        "always",
+        [
+          "chore",
+          "feat",
+          "fix",
+          "docs",
+          "style",
+          "refactor",
+          "test",
+          "ci",
+          "perf",
+          "revert",
+          "pages",
+          "posts"
+        ]
+      ]
+    }
+  }
+}
