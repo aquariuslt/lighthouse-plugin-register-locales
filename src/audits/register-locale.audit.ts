@@ -1,6 +1,6 @@
 import * as lighthouse from 'lighthouse';
 import * as i18n from 'lighthouse/lighthouse-core/lib/i18n/i18n';
-import * as defaultLocales from 'lighthouse/lighthouse-core/lib/i18n/locales';
+import { getLocaleConfig } from '../shared.util';
 
 const Audit = lighthouse.Audit;
 
@@ -12,19 +12,6 @@ const AUDIT_ID = 'register-locale';
 const AUDIT_TITLE = 'overriding locales';
 const AUDIT_DESCRIPTION = 'provide ability for customize locales in results';
 const AUDIT_FAILURE_TITLE = 'register locale data failed';
-
-export const getLocaleConfig = (context) => {
-  const locale = context.options.locale;
-
-  const registerLocales = context.options.registerLocales || {};
-
-  const targetLocaleData = Object.assign({}, defaultLocales[locale], registerLocales[locale]);
-
-  return {
-    locale,
-    localeData: targetLocaleData,
-  };
-};
 
 export class RegisterLocaleAudit extends Audit {
   static get meta() {
