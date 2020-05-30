@@ -4,7 +4,7 @@ export const getLocaleConfig = (context) => {
   const locale = context.settings.locale;
   const registerLocales = context.settings.registerLocales || {};
 
-  const targetLocaleData = Object.assign({}, defaultLocales[locale], registerLocales[locale]);
+  const targetLocaleData = Object.assign({}, defaultLocales[locale], registerLocales);
 
   return {
     locale,
