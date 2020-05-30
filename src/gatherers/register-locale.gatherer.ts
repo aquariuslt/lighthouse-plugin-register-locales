@@ -31,7 +31,7 @@ export class RegisterLocaleGatherer extends Gatherer {
   async afterPass(passContext) {
     // 3. revert snapshot if lhr is generated to clean next
     //    lh calling use default locale
-    i18n.registerLocaleData(this.targetLocale, this.targetLocaleDataSnapshot);
+    // i18n.registerLocaleData(this.targetLocale, this.targetLocaleDataSnapshot);
     return {};
   }
 }
