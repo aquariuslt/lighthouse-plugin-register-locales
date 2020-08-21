@@ -52,7 +52,7 @@
     "lerna": "3.22.1",
     "lighthouse": "6.2.0",
     "prettier": "2.0.5",
-    "pretty-quick": "2.0.1",
+    "pretty-quick": "3.0.0",
     "puppeteer": "5.2.1",
     "rimraf": "3.0.2",
     "semantic-release": "17.1.1",
