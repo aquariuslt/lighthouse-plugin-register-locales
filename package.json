@@ -51,7 +51,7 @@
     "koa-static": "5.0.0",
     "lerna": "3.22.1",
     "lighthouse": "6.2.0",
-    "prettier": "2.0.5",
+    "prettier": "2.1.0",
     "pretty-quick": "3.0.0",
     "puppeteer": "5.2.1",
     "rimraf": "3.0.2",
