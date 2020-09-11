@@ -53,7 +53,7 @@
     "lighthouse": "6.3.0",
     "prettier": "2.1.1",
     "pretty-quick": "3.0.2",
-    "puppeteer": "5.2.1",
+    "puppeteer": "5.3.0",
     "rimraf": "3.0.2",
     "semantic-release": "17.1.1",
     "ts-jest": "26.3.0",
