@@ -46,7 +46,7 @@
     "eslint-plugin-prettier": "3.1.4",
     "get-port": "5.1.1",
     "husky": "4.3.0",
-    "jest": "26.5.0",
+    "jest": "26.5.2",
     "koa": "2.13.0",
     "koa-static": "5.0.0",
     "lerna": "3.22.1",
