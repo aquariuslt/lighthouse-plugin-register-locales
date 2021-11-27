@@ -36,7 +36,7 @@
     "@types/jest": "27.0.3",
     "@types/koa": "2.13.4",
     "@types/lodash": "4.14.177",
-    "@types/node": "16.11.9",
+    "@types/node": "16.11.10",
     "@types/puppeteer": "5.4.4",
     "@typescript-eslint/eslint-plugin": "4.33.0",
     "@typescript-eslint/parser": "4.33.0",
